@@ -55,8 +55,8 @@ public class PictureEntity:  NSManagedObject , Codable {
         favorites = try container.decode(Int64.self, forKey: .favorites)
         }
     public func encode(to encoder: Encoder) throws {
-//       var container = encoder.container(keyedBy: codingKeys.self)
-//       try container.encode(name, forKey: .name)
+       var container = encoder.container(keyedBy: codingKeys.self)
+       try container.encode(previewURL, forKey: .previewURL)
      }
     
 }
